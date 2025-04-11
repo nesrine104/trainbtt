@@ -102,7 +102,7 @@ int chen(sv a[], int n)
     }
     return n;
 }
-void xoa(sv a[], int n)
+int xoa(sv a[], int n)
 {
     char svxoa[50];
     printf("Nhap ten sinh vien muon xoa:");
@@ -115,9 +115,8 @@ void xoa(sv a[], int n)
             a[i]=a[i+1];
         }
         n--;
-        printf("Danh sach sau khi sua");
-        xuatds(a, n);
     }
+    return n;
 }
 void sua(sv a[], int n)
 {
@@ -157,7 +156,10 @@ int main()
             case '3':   n=chen(a, n);
                         printf("Danh sach sau khi sua:\n");
                         xuatds(a, n); break;
-            case '4': xoa(a, n); break;
+            case '4':   n=xoa(a, n);
+                        printf("Danh sach sau khi sua");
+                        xuatds(a, n);
+                        break;
             case '5': sua(a, n); break;
             case '6': return 0;
             default: printf("Moi lua chon lai\n");
