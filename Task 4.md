@@ -66,7 +66,7 @@ void nhapds(sv a[], int *n)
 void xuatds(sv a[], int n)
 {
     printf("\n\tDANH SACH SINH VIEN\n");
-    printf("STT\tHo ten\t\tTuoi\tDiem trung binh\n");
+    printf("%-5s%-20s%-10s%-10s\n","STT","Ho Ten","Tuoi","Diem trung binh");
     for(int i=0; i<n; i++) {
         printf("%-5d%-20s%-10d%-10.2f\n", i+1, a[i].ho_ten, a[i].tuoi, a[i].diem_tb);
     }
