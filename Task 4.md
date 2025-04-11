@@ -89,6 +89,7 @@ int chen(sv a[], int n)
     int check=tim(a, n, svchen);
     if(check<0) {
         printf("Khong co sinh vien");
+        return 0;
     }
     else {
         n++;
@@ -127,6 +128,7 @@ void sua(sv a[], int n)
     int check=tim(a, n, svsua);
     if(check<0) printf("Khong co sinh vien");
     else nhap(&a[check]);
+    xuatds(a, n);
 }
 void menu()
 {
